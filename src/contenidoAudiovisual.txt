@@ -1,0 +1,10 @@
+Interestelar,169,Ciencia ficción
+El Padrino,175,Drama
+Inception,148,Suspenso
+Parasite,132,Thriller
+La La Land,128,Musical
+El caballero oscuro,152,Acción
+Matrix,136,Ciencia ficción
+Titanic,194,Romance
+Gladiator,155,Acción
+El resplandor,146,Terror

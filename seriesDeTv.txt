@@ -1,0 +1,10 @@
+Stranger Things,50,Ciencia ficción,4
+The Crown,55,Drama,5
+Breaking Bad,47,Drama,5
+The Mandalorian,35,Acción,3
+The Witcher,55,Fantasía,3
+Friends,22,Comedia,10
+Game of Thrones,60,Fantasía,8
+The Office,22,Comedia,9
+Dark,50,Ciencia ficción,3
+Squid Game,55,Thriller,1

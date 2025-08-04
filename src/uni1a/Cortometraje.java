@@ -27,5 +27,27 @@ public class Cortometraje extends ContenidoAudiovisual {
         System.out.println();
 		
 	}
+	
+	@Override
+    protected ContenidoAudiovisual instancia(String [] campos) {
+    	// validamos que haya sificientes campos
+    	if (campos.length < 4) return null;
+    	try{
+    		String titulo = campos[0];
+    		int duracion = Integer.parseInt(campos[1]);
+    		String genero = campos[2];
+    		String tema =  campos[3];
+    		return new Pelicula(titulo, duracion, genero,tema);
+    	} catch (NumberFormatException e) {
+    		System.out.println("Error convitiendo numero " + e.getMessage());
+    		return null;
+    	}
+    }
+	
+	@Override
+    public String escribir() {
+        return "Contometraje," + getTitulo() + "," + getDuracionEnMinutos() + "," +
+               getGenero() + "," + tema;
+    }
 
 }

@@ -1,0 +1,212 @@
+,,,,,,,,,,,,,,,,,,  SRP ................... // principio de responsabilidad simple unitaria, cada clase debe encargarse de una sola tarea especifica
+
+
+
+// Clase que se encarga SOLO de gestionar datos de los empleados
+class Empleado {
+    private String nombre;
+    private double salario;
+
+    public Empleado(String nombre, double salario) {
+        this.nombre = nombre;
+        this.salario = salario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+}
+
+// Clase que se encarga SOLO de calcular impuestos
+class ImpuestoCalculator {
+    public double calculateImpuesto(Empleado empleado) {
+        return empleado.getSalario() * 0.2; // 20% de impuesto
+    }
+}
+
+// Clase que se encarga SOLO de mostrar detalles del empleado
+class EmpleadoPrinter {
+    public void printDetails(Empleado empleado) {
+        System.out.println("nombre: " + empleado.getNombre());
+        System.out.println("salario: " + empleado.getSalario());
+    }
+}
+
+
+....OCP Open Close .......// una clase debe esatr abierta para su extencion, pero cerrada para ser modificada
+
+// Clase base
+abstract class Figura {
+    public abstract double calculateArea();
+}
+
+// Clase para círculo
+class Circulo extends Figura {
+    private double radius;
+
+    public Circulo(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Clase para rectángulo
+class Rectangle extends Figura {
+    private double width, height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double calculateArea() {
+        return width * height;
+    }
+}
+
+// Uso del principio
+class AreaCalculator {
+    public double calculateTotalArea(Figura[] figuras) {
+        double totalArea = 0;
+        for (Figura figura : figuras) {
+            totalArea += figura.calculateArea();
+        }
+        return totalArea;
+    }
+}
+
+...... L (Liskov Substitution Principle (LSP))........... // las sub clases deben ser sustituibles por sus clases base sin alterar el comportamiento
+
+class Pajaro {
+    public void fly() {
+        System.out.println("Vuelo...");
+    }
+}
+
+class Gorrion extends Pajaro {
+    @Override
+    public void fly() {
+        System.out.println("Gorrión volando...");
+    }
+}
+
+// Clase derivada que NO vuela, pero respeta el contrato
+class Pinguino extends Pajaro {
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Los pingüinos no pueden volar.");
+    }
+}
+
+// Solución: Crear jerarquías específicas para voladores
+interface Flyable {
+    void fly();
+}
+
+class FlyingPajaro implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("Vuelan...");
+    }
+}
+
+class NonFlyingPajaro {
+    public void walk() {
+        System.out.println("Caminan...");
+    }
+}
+
+............. ISP  ...............
+
+// Interfaces segregadas
+interface Printer {
+    void printDocument(String document);
+}
+
+interface Scanner {
+    void scanDocument(String document);
+}
+
+// Clase que implementa solo lo que necesita
+class SimplePrinter implements Printer {
+    @Override
+    public void printDocument(String document) {
+        System.out.println("Printing: " + document);
+    }
+}
+
+// Clase que implementa ambas interfaces
+class MultiFunctionPrinter implements Printer, Scanner {
+    @Override
+    public void printDocument(String document) {
+        System.out.println("Printing: " + document);
+    }
+
+    @Override
+    public void scanDocument(String document) {
+        System.out.println("Scanning: " + document);
+    }
+}
+
+............ DIP ..................
+
+// Interfaz para comunicación
+interface MessageSender {
+    void sendMessage(String message);
+}
+
+// Implementación de la interfaz
+class EmailSender implements MessageSender {
+    @Override
+    public void sendMessage(String message) {
+        System.out.println("Sending email: " + message);
+    }
+}
+
+class SmsSender implements MessageSender {
+    @Override
+    public void sendMessage(String message) {
+        System.out.println("Sending SMS: " + message);
+    }
+}
+
+// Clase de alto nivel que depende de la abstracción
+class NotificationService {
+    private MessageSender messageSender;
+
+    public NotificationService(MessageSender messageSender) {
+        this.messageSender = messageSender;
+    }
+
+    public void notify(String message) {
+        messageSender.sendMessage(message);
+    }
+}
+
+// Uso
+public class Main {
+    public static void main(String[] args) {
+        MessageSender emailSender = new EmailSender();
+        MessageSender smsSender = new SmsSender();
+
+        NotificationService emailService = new NotificationService(emailSender);
+        NotificationService smsService = new NotificationService(smsSender);
+
+        emailService.notify("Your report is ready.");
+        smsService.notify("Your OTP is 12345.");
+    }
+}
+
+
+
+..............
+

@@ -1,0 +1,10 @@
+Interestelar,169,Ciencia ficción,Warner Bros
+El Padrino,175,Drama,Paramount Pictures
+Inception,148,Suspenso,Warner Bros
+Parasite,132,Thriller,Barunson Entertainment
+La La Land,128,Musical,Lionsgate
+El caballero oscuro,152,Acción,Warner Bros
+Matrix,136,Ciencia ficción,Warner Bros
+Titanic,194,Romance,20th Century Fox
+Gladiator,155,Acción,Universal Pictures
+El resplandor,146,Terror,Warner Bros

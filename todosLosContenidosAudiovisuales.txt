@@ -1,0 +1,27 @@
+Pelicula,El Padrino,175,Drama,Paramount Pictures
+Pelicula,Inception,148,Suspenso,Warner Bros
+Pelicula,Parasite,132,Thriller,Barunson Entertainment
+Pelicula,La La Land,128,Musical,Lionsgate
+Pelicula,El caballero oscuro,152,Acción,Warner Bros
+Pelicula,Matrix,136,Ciencia ficción,Warner Bros
+Pelicula,Titanic,194,Romance,20th Century Fox
+Pelicula,Gladiator,155,Acción,Universal Pictures
+Pelicula,El resplandor,146,Terror,Warner Bros
+Serie,The Crown,55,Drama,5
+Serie,Breaking Bad,47,Drama,5
+Serie,The Mandalorian,35,Acción,3
+Serie,The Witcher,55,Fantasía,3
+Serie,Friends,22,Comedia,10
+Serie,Game of Thrones,60,Fantasía,8
+Serie,The Office,22,Comedia,9
+Serie,Dark,50,Ciencia ficción,3
+Serie,Squid Game,55,Thriller,1
+Documental,El_Océano_Profundidad,120,Ciencia,Exploración_de_los_fondos_marinos
+Documental,Guerra_y_Memoria,150,Historia,Testimonios_de_la_Segunda_Guerra_Mundial
+Documental,El_Futuro_del_Clima,85,Ambiental,Cambio_climático_y_sus_impactos_globales
+Documental,Arte_Callejero_Global,75,Cultura,Evolución_del_grafiti_en_las_metropolitanas
+Documental,Ingeniería_Anciana,110,Documental_científico,Secretos_de_la_arquitectura_en_civilizaciones_antiguas
+Documental,La_Mente_Humana,100,Ciencia,Cómo_funciona_el_cerebro_y_la_conciencia
+Documental,Viaje_por_el_Sistema_Solar,95,Astronomía,Exploración_de_planetas_y_lunas
+Documental,Indígenas_del_Amazónica,130,Etnografía,Comunidades_tribales_y_su_relación_con_la_selva
+Documental,Tecnología_y_Sociedad,115,Sociedad,Impacto_de_la_inteligencia_artificial_en_la_vida_cotidiana
